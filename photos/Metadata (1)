@@ -1,0 +1,85 @@
+<!--
+This is example metadata only. Do *NOT* supply it as is without review,
+and do *NOT* provide it in real time to your partners.
+ -->
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_52acc341078b20ac2cac2483a1186ce7a90ab290" entityID="https://jitsi.parthraj.cloud/shibboleth">
+
+  <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+  </md:Extensions>
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/Login"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>https://jitsi.parthraj.cloud/shibboleth</ds:KeyName>
+        <ds:KeyName>https://jitsi.parthraj.cloud/shibboleth/shibboleth</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=https://jitsi.parthraj.cloud/shibboleth</ds:X509SubjectName>
+          <ds:X509Certificate>MIIEfTCCAuWgAwIBAgIUDMgH/gb4jcFbBZViWNXgF1y+cE4wDQYJKoZIhvcNAQEL
+BQAwMjEwMC4GA1UEAxMnaHR0cHM6Ly9qaXRzaS5wYXJ0aHJhai5jbG91ZC9zaGli
+Ym9sZXRoMB4XDTI1MDYxMDE1NTg1NloXDTM1MDYwODE1NTg1NlowMjEwMC4GA1UE
+AxMnaHR0cHM6Ly9qaXRzaS5wYXJ0aHJhai5jbG91ZC9zaGliYm9sZXRoMIIBojAN
+BgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA1Xe8rKDlMD0kYaNC9rDLXw4oGJm4
+y8F4KJf3iMji7jrDZd7YvUnDhaWkxyccs0dul5UoTQn4htLx1zNdsgyNK2V4MW4m
+0gHgQ3XURCn3N4HHg6yxncmCCcxQ8WQnMK9MHJCbwjuKK+BCyfg1+M/qbZrz/L7R
++SuAtiQM1r/aynnC2j1wfeWRWkWIcC3sdHjEmOD7QVQlrZTtv16/RA6NJ8B7p6VU
+1WQA/6z/+7KgvQWskAjzD7/IAPs0WR151dgdOtG2k5mF5PBomWsPP8+LdjXEUGnr
+ZJRod42qoox8kffeAnDUW0cI2IxebEP7G4m7ZoWp2OSMa5uELAy6gAFHNkfFWYXd
+5GLd+c/kMC/F4amc7sLFl0B9oXOzE2TUSv/JbYqVBF3fOfyYfVwVVUje+T0bSare
+12E8lVFvj+9RD5zjTYVzceh2mYvtrosBDDCklaQiEKtZGqug4TSdY6z2lmx1sJjP
+TUTk7Rh7Houod6cO8koZs0Ai7KetCyiNB+NxAgMBAAGjgYowgYcwZgYDVR0RBF8w
+XYInaHR0cHM6Ly9qaXRzaS5wYXJ0aHJhai5jbG91ZC9zaGliYm9sZXRohjJodHRw
+czovL2ppdHNpLnBhcnRocmFqLmNsb3VkL3NoaWJib2xldGgvc2hpYmJvbGV0aDAd
+BgNVHQ4EFgQUQMrQWKiuKpa+9hHMkQ0RQcT4A58wDQYJKoZIhvcNAQELBQADggGB
+ACV8/IUIxTY2lBVlzlPyY5MKwuzRNOI9krHe7Wsp4v/2Qtw4zOjYRkqVbcYLeJPH
+XSmzIV02aeSLZV9o2/td9pIz8Fik+XaHR14/k3ddcjtOYTuuhxJwIrxr+OlTrBNl
++C5e93JU10jEvPIqHSI9vzw3+9ao8PrmG8ZOmyZwoHwxo273UT8e6JYKyHXAaDBF
+B2xC3J5BtZMZYGvIFzu8Ctee22rRQ57X//TkODW8/h/Vryg52oG3UfhMz+4sSu0g
+4qWq/4pjcyEqGChSzLfP6PlK6CXpt8ajCCPmUpvrD/O3gXmjNBKq+f6Fq0Ty5xUn
+og7yY+w9YS8MWi0gFWUFNgrxPlOyOciqhDg9GkeYDPISg8jPbbBbCJY2bfrndwNL
+ya6pB+XM4YAKdwDocb8vqdYZnkogy8PQUYV6hTj3jf138tI1ZYJKNRORa/K+qbZT
+rCcxFfq6cGtqQNX57Dek3+5XoSdkvc2xlfeDjI7/UZaQzn+rNIm0TOR1mGhWi5Y8
+eA==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://jitsi.parthraj.cloud/Shibboleth.sso/SAML2/ECP" index="4"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>
