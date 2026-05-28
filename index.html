@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parthraj - DevOps Engineer</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <style>
         /* Base Styles - Monochrome Pro */
@@ -31,7 +33,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Manrope', sans-serif;
             color: var(--text-color);
             line-height: 1.5;
             background-color: var(--background);
@@ -49,6 +51,7 @@
             font-weight: 700;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1.5rem;
         }
@@ -95,6 +98,7 @@
             font-size: 1.25rem;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -234,6 +238,7 @@
             font-weight: 700;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
@@ -495,6 +500,7 @@
             margin-bottom: 3rem;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -935,6 +941,192 @@
             animation: pulse 2s infinite;
         }
 
+        /* Modern unique theme overrides */
+        :root {
+            --primary-color: #dbeafe;
+            --secondary-color: #22d3ee;
+            --text-color: #f8fafc;
+            --light-text: #94a3b8;
+            --background: #020617;
+            --card-background: rgba(15, 23, 42, 0.55);
+            --border-color: rgba(148, 163, 184, 0.24);
+            --hover-color: #f1f5f9;
+            --accent-glow: rgba(34, 211, 238, 0.24);
+            --secondary-glow: rgba(168, 85, 247, 0.24);
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 15% 10%, rgba(34, 211, 238, 0.15), transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.14), transparent 35%),
+                radial-gradient(circle at 50% 85%, rgba(59, 130, 246, 0.14), transparent 42%),
+                var(--background);
+        }
+
+        .container {
+            max-width: 1180px;
+        }
+
+        .navbar {
+            background: rgba(2, 6, 23, 0.45);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+            backdrop-filter: blur(14px);
+        }
+
+        .navbar.scrolled {
+            background: rgba(2, 6, 23, 0.78);
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 7rem 0 4rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            padding-bottom: 0.12em;
+            text-wrap: balance;
+            background: linear-gradient(120deg, #f8fafc 10%, #67e8f9 55%, #c084fc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .status-badge {
+            background: rgba(15, 23, 42, 0.66);
+            border: 1px solid rgba(74, 222, 128, 0.55);
+            box-shadow: 0 0 0 1px rgba(74, 222, 128, 0.2) inset;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            max-width: 62ch;
+        }
+
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-highlights span {
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+            color: #dbeafe;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+        }
+
+        .btn {
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #22d3ee, #a855f7);
+            color: #020617;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.05);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background: rgba(15, 23, 42, 0.45);
+        }
+
+        .profile-image {
+            width: 330px;
+            height: 330px;
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #22d3ee, #a855f7, #3b82f6, #22d3ee);
+            filter: blur(8px);
+            opacity: 0.55;
+            z-index: -2;
+            animation: rotate-ring 8s linear infinite;
+        }
+
+        .profile-image img {
+            border-color: rgba(219, 234, 254, 0.85);
+        }
+
+        .image-glow {
+            opacity: 0.45;
+        }
+
+        .about,
+        .blogs,
+        .skills,
+        .contact,
+        .certificates {
+            position: relative;
+        }
+
+        .about::before,
+        .blogs::before,
+        .skills::before,
+        .contact::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(to bottom, rgba(148, 163, 184, 0.04), transparent 28%);
+        }
+
+        .blog-card,
+        .skill-card,
+        .contact-card,
+        .stat,
+        .cert-item {
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.42));
+            border-color: rgba(148, 163, 184, 0.24);
+            backdrop-filter: blur(7px);
+        }
+
+        .blog-card:hover,
+        .skill-card:hover,
+        .contact-card:hover,
+        .stat:hover,
+        .cert-item:hover {
+            border-color: rgba(34, 211, 238, 0.62);
+        }
+
+        .tag,
+        .level {
+            background: rgba(30, 41, 59, 0.75);
+            color: #cbd5e1;
+            border: 1px solid rgba(148, 163, 184, 0.28);
+        }
+
+        @keyframes rotate-ring {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-highlights {
+                justify-content: center;
+            }
+        }
+
 </style>
 </head>
 
@@ -963,10 +1155,15 @@
                 <div class="hero-text">
                     <div class="status-badge">
                         <i class="fas fa-circle" style="color: #10b981; font-size: 0.5rem; margin-right: 0.5rem;"></i>
-                        Hello Geeks
+                        Open to DevOps Opportunities
                     </div>
                     <h1>DevOps Engineer</h1>
                     <p>Architecting and managing scalable AWS DevOps infrastructure with a strong foundation in Linux. Passionate about building secure, efficient, and resilient environments using modern practices.</p>
+                    <div class="hero-highlights">
+                        <span>Cloud Automation</span>
+                        <span>Infrastructure as Code</span>
+                        <span>Observability First</span>
+                    </div>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
                             View Projects
@@ -1271,6 +1468,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Enhanced navbar scroll effect
         window.addEventListener('scroll', function() {
@@ -1322,49 +1520,46 @@
             });
         });
 
-        // Scroll-triggered animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add fade-in class to sections for scroll animations
         document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.blogs, .skills, .contact, .certificates');
-            sections.forEach(section => {
-                section.classList.add('fade-in');
+            // Platform-wide animation setup for all key UI blocks
+            const sections = document.querySelectorAll('section');
+            const sectionEffects = ['fade-up', 'fade-right', 'fade-left', 'zoom-in-up'];
+            sections.forEach((section, index) => {
+                section.setAttribute('data-aos', sectionEffects[index % sectionEffects.length]);
+                section.setAttribute('data-aos-duration', '900');
+                section.setAttribute('data-aos-easing', 'ease-out-cubic');
             });
 
-            // Add staggered animation to cards
-            const blogCards = document.querySelectorAll('.blog-card');
-            blogCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-                card.classList.add('fade-in');
+            const animatedGroups = [
+                { selector: '.blog-card', effect: 'zoom-in-up', step: 90 },
+                { selector: '.skill-card', effect: 'fade-up', step: 50 },
+                { selector: '.contact-card', effect: 'flip-left', step: 90 },
+                { selector: '.cert-item', effect: 'fade-right', step: 110 },
+                { selector: '.stat', effect: 'zoom-in', step: 120 }
+            ];
+
+            animatedGroups.forEach(group => {
+                document.querySelectorAll(group.selector).forEach((item, index) => {
+                    item.setAttribute('data-aos', group.effect);
+                    item.setAttribute('data-aos-delay', `${index * group.step}`);
+                    item.setAttribute('data-aos-duration', '800');
+                });
             });
 
-            const skillCards = document.querySelectorAll('.skill-card');
-            skillCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.05}s`;
-                card.classList.add('fade-in');
-            });
+            const heroTitle = document.querySelector('.hero h1');
+            const heroText = document.querySelector('.hero p');
+            if (heroTitle) heroTitle.setAttribute('data-aos', 'fade-up');
+            if (heroText) {
+                heroText.setAttribute('data-aos', 'fade-up');
+                heroText.setAttribute('data-aos-delay', '120');
+            }
 
-            const contactCards = document.querySelectorAll('.contact-card');
-            contactCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-                card.classList.add('fade-in');
+            AOS.init({
+                once: false,
+                offset: 80,
+                duration: 850,
+                easing: 'ease-out-cubic',
+                mirror: true
             });
         });
 
@@ -1400,11 +1595,11 @@
             document.body.classList.add('loaded');
         });
 
-        // Smooth reveal animation for certificates
-        const certItems = document.querySelectorAll('.cert-item');
-        certItems.forEach((item, index) => {
-            item.style.animationDelay = `${index * 0.2}s`;
-            item.classList.add('fade-in');
+        // Keep AOS positions accurate after load/layout shifts
+        window.addEventListener('load', function() {
+            if (window.AOS) {
+                AOS.refreshHard();
+            }
         });
     </script>
 </body>
