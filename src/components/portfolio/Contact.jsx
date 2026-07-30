@@ -57,7 +57,16 @@ function Contact() {
           </div>
         </motion.div>
         <div className="mt-6 text-center font-mono text-[11px] text-muted-foreground">
-          © {(/* @__PURE__ */ new Date()).getFullYear()} Parthraj Gohil · built with React, TanStack, Framer Motion
+          © {(/* @__PURE__ */ new Date()).getFullYear()} Parthraj Gohil · made by{" "}
+          <a
+            href="https://www.linkedin.com/in/shivani-meena-169574233/"
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-2 transition hover:text-[var(--cloud-cyan)]"
+          >
+            Shivani Meena
+          </a>
+          {" "}· React, TanStack, Framer Motion
         </div>
       </div>
     </section>;
