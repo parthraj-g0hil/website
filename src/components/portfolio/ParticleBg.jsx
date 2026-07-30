@@ -1,15 +1,12 @@
 import { useEffect, useRef } from "react";
-
-export function ParticleBg() {
+function ParticleBg() {
   const ref = useRef(null);
-  const mouse = useRef({ x: -1000, y: -1000 });
-
+  const mouse = useRef({ x: -1e3, y: -1e3 });
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     let raf = 0;
-
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const resize = () => {
       canvas.width = window.innerWidth * dpr;
@@ -20,22 +17,19 @@ export function ParticleBg() {
     };
     resize();
     window.addEventListener("resize", resize);
-
     const count = Math.min(80, Math.floor(window.innerWidth / 20));
     const parts = Array.from({ length: count }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       vx: (Math.random() - 0.5) * 0.3,
       vy: (Math.random() - 0.5) * 0.3,
-      r: Math.random() * 1.6 + 0.4,
+      r: Math.random() * 1.6 + 0.4
     }));
-
     const onMove = (e) => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
     };
     window.addEventListener("mousemove", onMove);
-
     const tick = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (const p of parts) {
@@ -80,12 +74,12 @@ export function ParticleBg() {
       window.removeEventListener("mousemove", onMove);
     };
   }, []);
-
-  return (
-    <canvas
-      ref={ref}
-      className="pointer-events-none fixed inset-0 -z-10 opacity-70"
-      aria-hidden
-    />
-  );
+  return <canvas
+    ref={ref}
+    className="pointer-events-none fixed inset-0 -z-10 opacity-70"
+    aria-hidden
+  />;
 }
+export {
+  ParticleBg
+};

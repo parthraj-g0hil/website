@@ -1,41 +1,40 @@
 # Parthraj Gohil — Cloud & DevOps Portfolio
 
-Interactive cloud-console portfolio built with **React 18 + Vite + Tailwind CSS + Framer Motion**.
+React 18 + JavaScript (JSX) + Vite + Tailwind CSS + Framer Motion. No TypeScript.
 
-## Local development
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:5173.
-
-## Production build
+## Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-The `dist/` folder is fully static and can be deployed to Vercel, Netlify,
-Cloudflare Pages, AWS S3 + CloudFront, or any static host.
+Static output lands in `dist/` — deploy to Vercel, Netlify, Cloudflare Pages or S3 + CloudFront.
+
+## Add your photo
+
+Drop a square image at `public/profile.jpg`. Until then the hero shows an animated monogram fallback.
 
 ## Structure
 
 ```
-├── index.html
-├── public/                 # static assets (resume, favicon)
-├── src/
-│   ├── main.jsx            # React entry
-│   ├── App.jsx             # single-page composition
-│   ├── styles/index.css    # Tailwind + design tokens
-│   ├── components/portfolio/  # all interactive sections
-│   ├── lib/                # data & helpers
-│   ├── hooks/              # custom React hooks
-│   ├── utils/              # reusable utilities
-│   └── assets/             # local media
-├── tailwind.config.js
-├── postcss.config.js
-└── vite.config.js
+public/           favicon, resume PDF, profile.jpg
+src/
+  assets/logos/   original PNG brand & certification logos
+  components/portfolio/  all sections (Nav, HeroDashboard, Terminal, ...)
+  hooks/          use-theme (light/dark), use-mobile
+  lib/            portfolio-data.js, logos.js, utils.js
+  pages/Home.jsx  page composition
+  styles/index.css design tokens + Tailwind
 ```
+
+## Theme
+
+Light/dark toggle in the navbar. Preference is saved to `localStorage` under `portfolio-theme`, defaulting to the OS setting.
