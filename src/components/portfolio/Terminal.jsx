@@ -166,7 +166,7 @@ function InteractiveTerminal() {
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-100px" }}
     className="glass-strong overflow-hidden rounded-2xl"
-    onClick={() => inputRef.current?.focus()}
+    onClick={() => inputRef.current?.focus({ preventScroll: true })}
   >
           <div className="flex items-center justify-between border-b border-border/50 px-4 py-2">
             <div className="flex items-center gap-1.5">
@@ -189,7 +189,6 @@ function InteractiveTerminal() {
     value={input}
     onChange={(e) => setInput(e.target.value)}
     onKeyDown={onKey}
-    autoFocus
     spellCheck={false}
     className="flex-1 bg-transparent font-mono text-[13px] text-foreground outline-none"
     aria-label="Terminal input"

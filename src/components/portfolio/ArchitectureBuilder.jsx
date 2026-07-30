@@ -69,11 +69,11 @@ function ArchitectureBuilder() {
           <div
     onDragOver={(e) => e.preventDefault()}
     onDrop={onDrop}
-    className="glass grid-bg relative min-h-[360px] rounded-2xl p-6"
+    className="glass grid-bg relative flex min-h-[360px] flex-col rounded-2xl p-6"
   >
-            {placed.length === 0 ? <div className="grid h-full min-h-[300px] place-items-center text-center text-sm text-muted-foreground">
+            {placed.length === 0 ? <div className="grid flex-1 place-items-center text-center text-sm text-muted-foreground">
                 Drop services here to compose your architecture.
-              </div> : <div className="flex flex-wrap items-center gap-3">
+              </div> : <div className="flex flex-1 flex-wrap content-start items-center gap-3">
                 {placed.map((id, i) => {
     const s = services.find((x) => x.id === id);
     return <motion.div
@@ -94,7 +94,7 @@ function ArchitectureBuilder() {
   })}
               </div>}
 
-            <div className="mt-6 flex items-center gap-2">
+            <div className="mt-6 flex flex-wrap items-center gap-2">
               <button onClick={validate} className="rounded-xl px-4 py-2 text-sm font-semibold text-white" style={{ background: "var(--gradient-primary)" }}>
                 Validate Architecture
               </button>
